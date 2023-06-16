@@ -1,0 +1,32 @@
+@use 'colours' as *;
+
+$breakpoint-mobile: 600px;
+
+:root {
+	--pad-3xl: 20px;
+	--pad-2xl: 15px;
+	--pad-xl: 10px;
+	--pad-lg: 8px;
+	--pad-md: 6px;
+	--pad-sm: 4px;
+	--pad-xs: 2px;
+
+	--border-width-thick: 2px;
+	--border-width-thin: 1px;
+	--borderRadius-sm: 3px;
+	--borderRadius-xl: 10px;
+	--borderRadius-round: 9e5px;
+
+	--trans-fastest: 0.05s;
+	--trans-faster: 0.1s;
+	--trans-fast: 0.15s;
+	--trans-normal: 0.2s;
+	--trans-slow: 0.25s;
+
+	/* light theme (default) */
+	// parse $light into CSS variables
+	@each $name, $value in $light {
+		--clr-#{$name}: #{$value};
+	}
+	color-scheme: light;
+}
