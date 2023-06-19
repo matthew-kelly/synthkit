@@ -75,12 +75,13 @@
 			font-size: 0.9rem;
 			font-weight: 600;
 			width: var(--button_width);
+			color: var(--clr-1000);
 
 			transition: all var(--trans-fast) ease;
 
 			span {
 				font-weight: inherit;
-				color: var(--clr-1000);
+				color: inherit;
 			}
 
 			&.has-notes {
