@@ -11,6 +11,7 @@ GLOBAL
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: 1em;
+	touch-action: manipulation;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
 	position: relative;
 	min-width: var(--_button-size-min);
 	min-height: var(--_button-size-min);
+	// padding: 1px var(--pad-md);
 
 	color: var(--_clr);
 	background-color: var(--_clr-background);

@@ -80,6 +80,7 @@
 
 			span {
 				font-weight: inherit;
+				color: var(--clr-1000);
 			}
 
 			&.has-notes {

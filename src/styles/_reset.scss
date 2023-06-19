@@ -50,6 +50,7 @@ button,
 textarea,
 select {
 	font: inherit;
+	padding: 0; /* for iOS */
 }
 
 /* remove link styling */

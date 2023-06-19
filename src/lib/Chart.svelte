@@ -84,12 +84,15 @@
 			if (playback_state === 'started') dispatch('pause'); // pause if playing
 		}}
 		on:mousedown={() => {
+			// only happens on desktop
 			dragging = true;
 		}}
 		on:mouseup={() => {
+			// only happens on desktop
 			dragging = false;
 		}}
 		on:mousemove={(e) => {
+			// only happens on desktop
 			if (!is_ready) return;
 			if (e.buttons === 1) {
 				has_scrolled = true;
@@ -229,6 +232,7 @@
 			border: var(--border-width-thick) solid var(--clr-400);
 			cursor: grab;
 			user-select: none;
+			overscroll-behavior-x: none;
 
 			&.dragging {
 				cursor: grabbing;
@@ -314,6 +318,8 @@
 					z-index: 1;
 
 					svg {
+						--icon_size: 24px;
+
 						height: var(--icon_size);
 						width: var(--icon_size);
 						fill: var(--clr-900);
@@ -374,6 +380,7 @@
 
 				svg {
 					height: 24px;
+					fill: var(--clr-900);
 				}
 			}
 		}
@@ -386,10 +393,12 @@
 
 				button {
 					width: 28px;
-					min-width: 0;
+					min-width: 28px;
+					padding: 0;
 
 					svg {
 						height: 16px;
+						width: 16px;
 					}
 				}
 			}
