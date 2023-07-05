@@ -17,6 +17,9 @@
 	import SynthOptions from './SynthOptions.svelte';
 	import DrumkitOptions from './DrumkitOptions.svelte';
 
+	// FIXME: audio is distorted on android
+	// FIXME: audio doesn't play on iOS?
+
 	const initial_length = 16;
 	export let melody: Melody = Array(initial_length).fill([]);
 	export let drums: Drums = Array(initial_length).fill([]);
@@ -94,6 +97,7 @@
 		}
 	}
 
+	// FIXME: notes/drums added during playback do not play until pausing and restarting track
 	function prepare_to_play() {
 		Tone.Transport.loopEnd = `0:0:${track_length}`;
 		melody.forEach((note, index) => {

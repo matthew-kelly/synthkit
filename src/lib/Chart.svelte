@@ -75,6 +75,8 @@
 	}
 </script>
 
+<!-- TODO: test mobile chart scrolling on iOS -->
+
 <div class="chart-container" style="--bars: {melody.length + 1}; --beat_width: {beat_width}px;">
 	<div
 		class="chart"
@@ -128,6 +130,11 @@
 							dispatch('switch_track', 'melody');
 						}
 					}}
+					on:touchstart={() => {
+						// only on touch devices
+						dispatch('select_beat', i);
+						dispatch('switch_track', 'melody');
+					}}
 				>
 					{#each notes as note (note)}
 						<div
@@ -167,6 +174,11 @@
 							dispatch('select_beat', i);
 							dispatch('switch_track', 'drums');
 						}
+					}}
+					on:touchstart={() => {
+						// only on touch devices
+						dispatch('select_beat', i);
+						dispatch('switch_track', 'drums');
 					}}
 				>
 					{#each beats as beat (beat)}

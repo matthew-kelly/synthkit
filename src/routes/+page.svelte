@@ -15,8 +15,13 @@
 		samples are sourced from <a href="https://www.drumkito.com/" target="_blank" rel="noreferrer">drumkito</a>.
 	</p>
 	<p>
-		SynthKit is created by <a href="https://matthewkelly.ca/" target="_blank" rel="noreferrer">Matt Kelly</a>, a full
+		SynthKit is built by <a href="https://matthewkelly.ca/" target="_blank" rel="noreferrer">Matt Kelly</a>, a full
 		stack web developer and sourdough bread baker from Vancouver, BC.
+	</p>
+	<p class="disclaimer">
+		<span>NOTE:</span> Tone.js, the underlying sound library used by Synthkit, does not seem to currently work on iOS. As
+		I am unable to replicate this bug in the iOS Simulator, I only have an Android device to test, and Synthkit is only a
+		portfolio project, I recommend using Synthkit on your computer to get the full experience.
 	</p>
 
 	<div class="logo">
@@ -73,6 +78,17 @@
 				background-size: 400% 400%;
 				box-shadow: -10vmin 10vmin 0 rgba(255, 255, 255, 0.07);
 				animation: animate_blob 20s linear infinite alternate;
+			}
+		}
+
+		.disclaimer {
+			margin-top: 32px;
+			font-weight: 400;
+			font-size: 14px;
+
+			span {
+				font-weight: 700;
+				font-size: inherit;
 			}
 		}
 	}

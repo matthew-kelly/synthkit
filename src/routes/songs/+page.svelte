@@ -49,6 +49,20 @@
 				</svg>
 			</a>
 		</li>
+		{#if songs.length === 0}
+			<li
+				in:fly={{ y: -20, duration: 200, delay: 200 }}
+				out:fly={{ y: -20, duration: 200 }}
+				style="--border-color: #ccc;"
+			>
+				<a href="/demos" data-sveltekit-preload-data="off">
+					Check out a demo <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<title>right-arrow</title>
+						<path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+					</svg>
+				</a>
+			</li>
+		{/if}
 		{#each songs as song, i (song.id)}
 			<div animate:flip={{ duration: 150, easing: cubicOut, delay: 150 }}>
 				<SongTitle
